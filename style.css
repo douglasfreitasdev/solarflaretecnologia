@@ -1,0 +1,509 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+.green-title {
+  position: absolute;
+  font-size: 1.5rem !important;
+  color:#2ecc71;
+  border-left: 5px solid #2ecc71 !important;
+  padding: 5px;
+  margin-top: -140px;
+  margin-left: 40px;
+
+
+
+}
+
+.gray-title {
+  font-size: 2rem;
+  color:#333;
+  margin-left: 40px;
+  margin-top: -90px;
+  width: 570px;
+  text-transform: capitalize;
+  
+ 
+}
+.title {
+  font-family: 'Londrina Sketch', cursive;
+  font-size: 12rem;
+  color:#e1e1e1;
+  margin-top: -60px;
+  text-transform: uppercase;
+
+
+}
+
+
+
+/* HEADINGS */
+
+
+
+
+
+
+/* BASIC SETUP */
+
+.page-wrapper {
+  width: 100%;
+  height: auto;
+  z-index: -999;
+}
+
+.nav-wrapper {
+  width: 100%;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25),
+  0 10px 10px rgba(0, 0, 0, 0.22);
+
+}
+
+.grad-bar {
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(-45deg, #ee7752, #ffa41a, #f4ca1a, #f6a41a);
+  background-size: 400% 400%;
+  -webkit-animation: gradbar 15s ease infinite;
+  -moz-animation: gradbar 15s ease infinite;
+  animation: gradbar 15s ease infinite;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  height: 100px;
+  overflow: hidden;
+
+}
+
+.navbar img {
+  height: 80px;
+  width: 130px;
+  justify-self: start;
+  margin-left: 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-self: end;
+}
+
+
+.nav {
+
+}
+.nav-item {
+  align-self: flex-end;
+  height:50px;
+   line-height:50px; 
+   font-size:0;
+   
+ }
+.nav-item a{
+  position:relative;
+   display:inline-block;
+    padding:0 30px;
+    margin:0px auto;
+    
+       letter-spacing:-.5px;
+        text-decoration:none;
+      color: #59595b;
+  font-size: 1rem;}
+
+
+.nav a:hover {
+  color:#fff;
+}
+.nav-item a:before, .nav a:after {
+  content: '';
+  display: block;
+}
+.nav-item a{
+  overflow: hidden;
+   z-index:2}
+
+.nav-item a:before{
+  position:absolute; 
+  right:100%;
+   top:0;
+    width:100%;
+     height:100%;
+      background-color:#f6a41a;
+       z-index:-1; 
+       opacity:0; 
+       -webkit-transition:all .2s ease-out; -o-transition:all .2s ease-out; 
+       transition:all .5s ease-out;
+        border-right:2px solid #e96111;}
+.nav-item a:hover:before{opacity:1; right:0;}
+
+
+@media (max-width:767px) {
+  .nav-item {
+
+    
+    margin:10px auto;
+}
+}
+
+/* SECTIONS */
+
+.headline {
+  width: 100%;
+  height: 100vh;
+  min-height: 350px;
+  background: #fff;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 4rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #545454;
+    margin-top: -20px;
+}
+.headline h1 {
+
+  font-size: 10rem;
+  color: #e1e1e1;
+  font-family: 'Londrina Sketch', cursive;
+  margin-top: -50px;
+  text-transform: uppercase;
+
+}
+.headline h2 {
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  margin-left: 100PX;
+  margin-top: -100px;
+ width:800px;
+  color: #313131;
+  }
+  
+
+
+  
+.headline a {
+  background: #2ecc71;
+  text-decoration: none;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 10px auto;
+  padding: 0.7em 1.2em;
+  margin-left: 100px;
+  text-transform: uppercase;
+}
+
+.headline a:hover {
+  background: #f6a41a;
+  transition: all 0.3s;
+}
+
+
+
+.headline p {
+  font-size: 1rem;
+  margin-left: 100PX;
+  font-weight: 200;
+  width:700px;
+  color: #515151;
+  
+}
+
+
+.features {
+  width: 100%;
+  height: auto;
+  background-color: #f1f1f1;
+  display: flex;
+  padding: 50px 20px;
+  justify-content: space-around;
+}
+
+.feature-container {
+  flex-basis: 30%;
+  margin-top: 10px;
+}
+
+.feature-container p {
+  color: #000;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.feature-container img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* SEARCH FUNCTION */
+
+#search-icon {
+  font-size: 0.9rem;
+  margin-top: 3px;
+  margin-left: 15px;
+  transition: color 0.3s ease-out;
+}
+
+#search-icon:hover {
+  color: #3498db;
+  cursor: pointer;
+}
+
+.search {
+  transform: translate(-35%);
+  -webkit-transform: translate(-35%);
+  transition: transform 0.7s ease-in-out;
+  color: #3498db;
+}
+
+.no-search {
+  transform: translate(0);
+  transition: transform 0.7s ease-in-out;
+}
+
+.search-input {
+  position: absolute;
+  top: -4px;
+  right: -125px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.6s ease;
+}
+
+.search-active {
+  opacity: 1;
+  z-index: 0;
+}
+
+input {
+  border: 0;
+  border-left: 1px solid #ccc;
+  border-radius: 0; /* FOR SAFARI */
+  outline: 0;
+  padding: 5px;
+}
+
+/* MOBILE MENU & ANIMATION */
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #3f3f3f;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle {
+  justify-self: end;
+  margin-right: 25px;
+  display: none;
+}
+
+.menu-toggle:hover {
+  cursor: pointer;
+}
+
+#mobile-menu.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* KEYFRAME ANIMATIONS */
+
+@-webkit-keyframes gradbar {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes gradbar {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradbar {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Media Queries */
+
+/* Mobile Devices - Phones/Tablets */
+
+@media only screen and (max-width: 720px) {
+  .features {
+    flex-direction: column;
+    padding: 50px;
+  }
+
+  /* MOBILE HEADINGS */
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  /* MOBILE NAVIGATION */
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: start;
+    top: 105px;
+    background-color: #313131;
+    color:#f6a41a;
+    width: 100%;
+    height: calc(100vh - 55px);
+    transform: translate(-101%);
+    text-align: center;
+    overflow: hidden;
+  }
+
+
+ 
+
+  .navbar li:first-child {
+    margin-top: 50px;
+  }
+
+  .navbar li a {
+    font-size: 1rem;
+
+  }
+  .navbar li a:hover {
+    color:#313131;
+
+  }
+
+  .menu-toggle,
+  .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  .mobile-nav {
+    transform: translate(0%) !important;
+  }
+
+  /* SECTIONS */
+
+  .headline {
+    height: 20vh;
+  }
+
+  .feature-container p {
+    margin-bottom: 25px;
+  }
+
+  .feature-container {
+    margin-top: 20px;
+  }
+
+  .feature-container:nth-child(2) {
+    order: -1;
+  }
+
+  /* SEARCH DISABLED ON MOBILE */
+
+  #search-icon {
+    display: none;
+  }
+
+  .search-input {
+    display: none;
+  }
+}
+
+
+/*Sobre*/
+
+.sobre {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.sobre-item {
+  width: 550px;
+  
+}
+.sobre-item p{
+  color: #777;
+  line-height: 2em;
+  font-size: 1rem;
+  margin-top: 40px;
+  margin-left: 40px;
+  
+}
+.sobre img {
+  width:500px;
+  height: 500px;
+}
